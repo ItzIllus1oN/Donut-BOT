@@ -761,17 +761,15 @@ function chatModule(bot) {
     if (!bot || username === bot.username) return;
 
     try {
-        if (message.startsWith('!tp ') && config.chat.respond) {
-          const target = message.split(' ')[1];
-          if (target) bot.chat(`/tp ${target}`);
-        }
+      if (message.startsWith('!tp ') && config.chat.respond) {
+        const target = message.split(' ')[1];
+        if (target) bot.chat(`/tp ${target}`);
       }
     } catch (e) {
       console.log('[Chat] Error:', e.message);
     }
   });
 }
-
 // ============================================================
 // CONSOLE COMMANDS
 // ============================================================
